@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body{
+    background-color: black;
+
+}
+
+header, main, footer{
+    background-color:  rgb(249, 249, 249);
+    width: 700px;
+    margin: 0 auto;
+}
+
+header{
+    
+
+    position: relative;
+}
+
+nav {
+    
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    text-align: right;
+}
+
+nav ul{
+    padding-right: 10px; 
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px; 
+    font-family: 'Noto Serif', serif;
+    font-size: 20px; 
+}
+nav ul li a {
+    text-decoration: none;
+}
+nav ul li a:link {
+    color: black;
+}
+nav ul li a:visited {
+    color: purple;
+}
+nav ul li a:hover{
+    color: slateblue;
+}
+nav ul li a:active{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+main{
+    
+    height: 500px;
+
+}
+
+footer p#copy-notice{
+    text-align: center;
+    font-size: 12 px;
+    font-family: 'Noto Serif', serif;
+    color: black;
+    padding: 12px 0;
+}
+
+/* Contact Page */
+
+main div#first-column, main div#second-column {
+    height: 500px;
+    display: inline-block;
+}
+
+main div#first-column{
+    background-color:cadetblue;
+    width: 467px;
+    
+}
+
+main div#second-column{
+    background-color:lightblue;
+    width: 233px;
+    
+}
