@@ -12,13 +12,10 @@ header, main, footer{
 }
 
 header{
-    
-
     position: relative;
 }
 
 nav {
-    
     width: 350px;
     position: absolute;
     right: 0;
@@ -33,7 +30,7 @@ nav ul li{
     display: inline-block;
     margin: 10px; 
     font-family: 'Noto Serif', serif;
-    font-size: 20px; 
+    font-size: 18px; 
 }
 nav ul li a {
     text-decoration: none;
@@ -52,11 +49,9 @@ nav ul li a:active{
     top: 2px;
     left: 2px;
 }
-main{
-    
+/*main{
     height: 500px;
-
-}
+}*/
 
 footer p#copy-notice{
     text-align: center;
@@ -68,19 +63,95 @@ footer p#copy-notice{
 
 /* Contact Page */
 
-main div#first-column, main div#second-column {
-    height: 500px;
+main#contact-page div#first-column, main div#second-column {
+    vertical-align: top;
     display: inline-block;
+    
 }
 
 main div#first-column{
-    background-color:cadetblue;
+    /*background-color:cadetblue;*/
     width: 467px;
     
 }
 
+main div#first-column form label{
+    display: inline-block;
+    font-family: 'Noto Serif', serif;
+    padding: 18px;
+    text-transform: uppercase;
+}
+
+main div#first-column form input, main div#first-column form textarea{
+    display: inline-block;
+    margin-left: 18px;
+    font-size: 24px;
+    padding: 6px;
+    font-family:'Noto Serif', serif;
+    border-width: 0;
+    background-color: lightgrey;
+    border-radius: 6px;
+
+}
+
+main div#first-column form textarea{
+    width: 320px;
+}
+
 main div#second-column{
-    background-color:lightblue;
     width: 233px;
+    height: 300px;
+    margin-top: 18px;
+}
+main div#second-column p {
+        padding: 6px;
+        font-family: 'Noto Serif', serif;
+        color: black;
+    }
     
+    main div#second-column h2 {
+        padding: 6px;
+        font-size: 18px;
+        font-family: 'Noto Serif', serif;
+        color: grey;
+        text-transform: uppercase;
+    }
+    
+    main div#second-column a {
+        color: cadetblue;
+        text-decoration: none;
+    }
+
+/* Service Page */
+
+main#services-page table{
+    /*border: 1px solid grey;*/
+    width: 100%; 
+
+}
+main#services-pages table td, main#service-page table th{
+    /*border: dashed grey 1px;*/
+}
+
+main#services-page table thead{
+    background-color: cornflowerblue;
+   
+
+}
+main#service-page table thead th{
+    padding: 6px;
+    font-family:'Noto Serif', serif;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+main#services-page table tbody td{
+    font-family:'Noto Serif', serif;
+    text-align: right;
+    padding: 6px;
+}
+
+main#services-page table .odd-row{
+    background-color: lightgray ;
 }
