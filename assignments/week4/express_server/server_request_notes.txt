@@ -1,0 +1,10 @@
+/sayHello
+what I should send = {
+    message: string
+    number: string
+}
+
+what I expect from the back-end = {
+    results: string //whether I won or not
+    error: boolean // the number was out of range of 1 to 10.
+}

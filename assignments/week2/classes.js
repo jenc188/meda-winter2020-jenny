@@ -49,9 +49,6 @@ class Car {
 }
 
 
-
-
-
 let car3 = new Car("Tesla", "X", 2016); //using class to build
 let car4 = new Car("Chevy", "Bolt", 2016);
 

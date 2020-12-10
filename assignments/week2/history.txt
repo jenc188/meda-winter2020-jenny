@@ -10,3 +10,9 @@ The file essay2.txt contains a total of 1984 letters.
 It has a total of 345 words in it.
 It has a total of 39 sentences in it.
 
+essay1.txt Fri Nov 13 2020 14:27:12 GMT-0800 (Pacific Standard Time)
+
+The file essay1.txt contains a total of 2395 letters.
+It has a total of 407 words in it.
+It has a total of 53 sentences in it.
+
