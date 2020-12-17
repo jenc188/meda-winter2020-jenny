@@ -1,6 +1,7 @@
 body {
-    background-color: #DCD0FF;
-    
+    /*background-color: #DCD0FF;*/
+    background-color: blanchedalmond;
+  
 }
 
 #loading-icon {
@@ -15,15 +16,93 @@ body {
     height: 26px;
     width: 26px;
     display: inline-block;
+    position: absolute;
+}
+
+#loader #loader-icon {
+    position: relative;
 }
 
 #submit-area {
-    height: 26px;
+    height: 30px;
     width: 110px;
     display: inline-block;
     vertical-align: top;
 }
 
-#submit{
-    background-color: rgb(154, 129, 212);
+#message {
+    height: 25px;
+    position: absolute;
+}
+
+#message p {
+    position: relative;
+    margin-block-start: 0;
+    color: green;
+}
+
+#tasks {
+    width: 400px;
+    /*border: solid 1px grey;*/
+}
+
+#tasks tbody tr td:nth-child(5) {
+    position: absolute;
+}
+
+#tasks tbody tr td img {
+    display: none;
+    position: relative;
+}
+/*#submit{
+    background-color: rgb(154, 129, 212)
+}*/
+
+#new-note label { 
+    margin-left: 5px;
+}
+
+h1{
+ color: #585858;
+ /*width: 480px;*/
+}
+
+#containerCreate {
+    background-color: #F0B640;
+    width: 500px;
+    margin-left: 30px;
+    
+}
+#message {
+    background-color: #F0B640;
+    width: 500px;
+    margin-left: -20px;
+   
+  
+}
+
+#containerShow {
+    background-color: #F0B640;
+    width: 480px;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+th { 
+   border-bottom: 2px solid grey;
+}
+
+/*#submit {
+    background-color: orange;
+    color:white;
+}*/
+#contentCenter{
+    padding-left: 20px;
+}
+
+#dateDisplay {
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 50px;
 }

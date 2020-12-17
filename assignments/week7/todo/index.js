@@ -1,11 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const credentials = require("./credentials.js")
+const credentials = require("./credentials.js");
 
 const dbCredentials = credentials.dbURL;
-//console.log(credentials.secretValue);
-//console.log(dbCredentials);
 const dbOptions = {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true};
 let dbConnection = mongoose.connect(dbCredentials, dbOptions, (error) => {
     if (error) {
@@ -14,6 +12,7 @@ let dbConnection = mongoose.connect(dbCredentials, dbOptions, (error) => {
         console.log("MongoDB connection opened.");
     }
 });
+
 let todoSchema = new mongoose.Schema({
     title: String,
     text: String,
@@ -41,10 +40,10 @@ app.use("/", express.static("client/"));
 app.post("/newNote", (request, response) => {
     
     const note = request.body;
-    //console.log(typeof note.completed);
-//sanitize in put
 
-   let newNoteDocument = new todoModel({
+    // Sanitize Inputs
+
+    let newNoteDocument = new todoModel({
         title: note.title,
         text: note.text,
         completed: (note.completed === "true"),
@@ -52,19 +51,56 @@ app.post("/newNote", (request, response) => {
         priority: parseInt(note.priority),
         timestamp: parseInt(note.timestamp)
     });
-    
-    newNoteDocument.save((error) => {
 
+    newNoteDocument.save((error) => {
+        
         const responseObject = {
             saved: false,
+            savedTask: newNoteDocument,
             error: null
         };
-    
+
         if (error) {
             response.send(responseObject);
-        }else {
+        } else {
             responseObject.saved = true;
             response.send(responseObject);
         }
     });
+});
+
+app.post("/getList", (request, response) => {
+    todoModel.find({}, (error, results) => {
+        
+        const responseObject = {
+            list: results,
+            error: null
+        };
+        
+        if (error) {
+            console.log("failed to read database.");
+        } else {
+            response.send(responseObject);
+        }
+    });
+});
+
+app.post("/modify", (req, res) => {
+
+    let request = req.body;
+
+    if (request.action === "delete") {
+        todoModel.findByIdAndDelete(request.id, (error, deleted) => {
+            if (error) {
+                console.log(error);
+            } else {
+                let response = {
+                    copy: deleted
+                }
+
+                res.send(response);
+            }
+        });
+    }
+
 });
