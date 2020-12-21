@@ -13,7 +13,7 @@ dataArray.shift();
 dataArray.pop();
 
 titleArray = [];
-
+//split arrays by commas
 for (let i = 0; i < dataArray.length; i++) {
     let entry = dataArray[i].split(",");
     let fixedEntry = helpers.checkTitleCommas(entry);
@@ -29,7 +29,7 @@ for (let i = 0; i < dataArray.length; i++) {
 console.log("What Union has the most members?");
 
 let unions = {};
-
+//split the year by the dash
 titleArray.forEach(function (element) {
     let currentUnion = element.unionCode.toString();
     let currentYear = element.year;
@@ -114,7 +114,7 @@ titleArray.forEach(function (job) {
     }
 
 });
-
+//sort it
 let orderedUnionPay = highestUnionPay.sort(function (a, b) {
     if (a.unionCode > b.unionCode) {
         return 1;
